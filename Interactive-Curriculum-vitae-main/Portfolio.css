@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #f7c6c7, #f9e4d6);
+    background: lightgrey;
     color: #313131;
     scroll-behavior: smooth;
     padding: 20px;
@@ -15,8 +15,8 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #f7c6c7, #f9e4d6);
-    color: white;
+    background: white;
+    color: rgb(146, 146, 146);
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -35,7 +35,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -44,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #d6d6d6;
+    background-color: #ececec;
     transform: scale(1.05);
 }
 
@@ -56,20 +56,34 @@ nav a:hover {
 
 .projects-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-/* Project Boxes */
 .project-box {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 550px;
+    min-width: 300px; /* Ensures the boxes don't become too small */
+    height: 350px;
     padding: 30px;
     text-align: center;
     transition: transform 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .project-box {
+        width: calc(50% - 40px); /* Two boxes per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-box {
+        width: calc(100% - 40px); /* One box per row on mobile */
+    }
 }
 
 .project-box img {
@@ -103,9 +117,9 @@ nav a:hover {
 }
 
 .contact button {
-    background-color: #f3a9aa;
+    background-color: #000000;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 25px;
@@ -165,10 +179,48 @@ footer {
 }
 
 .api-tag {
-    background-color: #6cc24a; /* API: green */
+    background-color: #6cc24a;
+}
+
+.php-tag {
+    background-color: #4F5B93; 
+}
+
+.nodejs-tag {
+    background-color: #43853D 
+}
+
+.mysql-tag {
+    background-color: #4479A1;
+}
+
+.python-tag {
+    background-color: #306998;
+}
+
+.pythondjango-tag {
+    background-color: #092E20;
+}
+
+.pythonflask-tag {
+    background-color: #BDBDBD;
+}
+
+.mdb-tag {
+    background-color: #47A248;
 }
 
 /* Hover Effect for Tags */
 .tag:hover {
     opacity: 0.8;
+}
+
+a {
+    color: inherit; /* Inherits the color of the parent element */
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    color: inherit; /* Keeps the hover color the same as normal text */
+    text-decoration: none; /* No underline on hover */
 }

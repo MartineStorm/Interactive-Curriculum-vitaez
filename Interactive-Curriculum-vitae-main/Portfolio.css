@@ -4,60 +4,27 @@
     box-sizing: border-box;
 }
 
-d body {
-    font-family: Lyon Text","Times New Roman, serif;
-    background-color: #f5f5f5;
-    color: #333;
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f7c6c7, #f9e4d6);
+    color: #313131;
     scroll-behavior: smooth;
-}
-
-
-/* Animated Background */
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to right, rgba(255, 154, 158, 0.2), rgba(250, 208, 196, 0.2));
-    z-index: -1;
-    animation: floatingBackground 10s ease-in-out infinite alternate;
-}
-
-@keyframes floatingbackground {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-20px)
-    }
+    padding: 20px;
+    line-height: 1.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: linear-gradient(to right, #f7c6c7, #f9e4d6);
     color: white;
     padding: 20px;
     text-align: center;
-    animation: fadeIn 1s ease-out;
+    border-radius: 10px;
 }
 
 header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
-    animation: bounceIn 1s ease-out;
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    margin: 0;
 }
 
 nav {
@@ -70,133 +37,138 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 25px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
-}
-
-section {
-    padding: 40px;
-    text-align: center;
-    animation: fadeIn 1.5s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about,
-.projects,
-.contact {
-    background-color: white;
-    margin-bottom: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 30px;
-    position: relative;
-}
-
-.about::before,
-.projects::before,
-.contact::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #ff9a9e;
-    top: -40px;
-    right: 30px;
-    opacity: 0.5;
-    animation: floatingIcon 6s infinite alternate;
-}
-
-@keyframes floatingIcon {
-    0% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(10px);
-    }
-}
-
-.projects img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-out;
-}
-
-.projects img:hover {
+    background-color: #d6d6d6;
     transform: scale(1.05);
 }
 
-
-/* cute progress bar */
-
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-.progress {
-    background-color: #ff9a9e;
-    width: 0;
-    height: 20px;
-    transition: width 2s ease-out;
-}
-
-.progress-bar::before {
-    content: 🦄;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 25px;
-}
-
-footer {
-    background-color: #ddd;
-    color: white;
-    padding: 20px;
+/* Project Section */
+.projects-section {
+    margin: 40px 0;
     text-align: center;
 }
 
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-/* Button hover effects */
+/* Project Boxes */
+.project-box {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-box h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.project-box p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.project-box:hover {
+    transform: scale(1.01);
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 
 .contact button {
-    background-color: #ff9a9e;
+    background-color: #f3a9aa;
     border: none;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
 }
 
 .contact button:hover {
-    background-color: #fad0c4;
+    background-color: #d6d6d6;
     transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tag Styling */
+.tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Default Tag Style */
+.tag {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Tag Colors */
+.html-tag {
+    background-color: #e34c26; /* HTML: orange-red */
+}
+
+.css-tag {
+    background-color: #264de4; /* CSS: blue */
+}
+
+.js-tag {
+    background-color: #f0db4f; /* JavaScript: yellow */
+    color: #333; /* Dark text for readability on yellow */
+}
+
+.api-tag {
+    background-color: #6cc24a; /* API: green */
+}
+
+/* Hover Effect for Tags */
+.tag:hover {
+    opacity: 0.8;
 }

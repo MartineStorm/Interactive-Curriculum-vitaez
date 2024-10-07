@@ -51,16 +51,6 @@ h2 {
     text-align: center;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-}
-
-.skill {
-    margin-bottom: 10px;
-}
-
 .progress-bar {
     background-color: #e0e0e0;
     border-radius: 10px;
@@ -386,18 +376,35 @@ button#PortfolioButton:hover {
     /* Darker pink on hover */
 }
 
+/* Remove bullets from all unordered lists globally */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Specifically for the .skill class to ensure no bullets appear */
+.skill {
+    list-style: none;
+}
+
+.skill ul {
+    list-style: none; /* Ensure no bullets inside .skill ul */
+}
+
+.skill li {
+    list-style: none; /* Ensure no bullets inside .skill li */
+    padding-left: 0;  /* Remove indentation */
+    margin-left: 0;   /* Remove margin */
+}
+
 /* Add bullets only for the class 'with-bullets' */
 .with-bullets {
-    list-style-type: disc;
+    list-style-type: circle;
     padding-left: 20px;
-  }
-  
-  /* Remove bullets for all other lists */
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
+}
+
+
 .Education {
     width: 90%;
     margin: 0 auto;

@@ -3,62 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martine Storm - CV</title>
+    <title>Martine Storm - Interactive CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CVint.css">
 </head>
 <body>
+    <button id="darkModeToggle" class="dark-mode-btn">Toggle Dark Mode</button>
+
     <div class="container">
         <!-- Left section -->
         <div class="left-section">
             <div class="profile">
                 <h1>Martine Storm</h1>
-                <h2>Student</h2>
+                <h2>Webutvikler | Frontend-utvikler</h2>
                 <img src="path-to-your-profile-photo.jpg" alt="Martine Storm" class="profile-img">
             </div>
 
+            <!-- Button Container -->
             <div class="button-container">
                 <button id="downloadCvBtn" class="download-btn">Download CV</button>
                 <button id="PrintButton">Print CV</button>
                 <button id="GithubButton">Github Profile</button>
-                <button id="PortfolioButton">Portfolio</button>
+                <a href="Portfolio.html">
+                    <button id="PortfolioButton">Portfolio</button>
+                </a>
             </div>
 
-            <!-- Employment History -->
-            <section>
-                <h3>Employment History</h3>
-                <div class="job">
-                    <h4>Tavlemontør Lærling at AFRY Engineers, Kristiansand</h4>
-                    <span>August 2021 – September 2021</span>
-                </div>
-                <div class="job">
-                    <h4>Tavlemontør at Elaris Elektrotavler, Sandnes</h4>
-                    <span>December 2020 – December 2020</span>
-                    <p>1 ukes praksis</p>
+            <!-- Areas of Focus Section -->
+            <section id="about">
+                <h2>Areas of Focus</h2>
+                <p>Full-Stack Web Development (HTML, CSS, JavaScript, TypeScript), Database Management (MySQL, SQL), Back-End Programming (PHP, Node.js), Front-End Frameworks (React, Vue.js), API Integration and Real-Time Data Handling, UX/UI Design, Responsive Web Design, Cloud Hosting (Azure, AWS), Version Control (Git, GitHub).</p>
+            </section>
+
+            <!-- Education Section -->
+            <section id="Education">
+                <h2>Education</h2>
+                <div class="education">
+                    <h3>2024-2025 - Selvstudium i programmering</h3>
+                    <p>Brukte friåret på selvstendig å lære HTML, CSS, JavaScript gjennom online kurs og prosjekter, inkludert kurs fra CodeAcademy.</p>
+
+                    <h3>Beginner Courses:</h3>
+                    <p>Learn HTML - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="100%"></div>
+                        <div class="progress-text">100%</div>
+                    </div>
+
+                    <p>Learn HTML: Tables - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.1%"></div>
+                        <div class="progress-text">0.1%</div>
+                    </div>
+
+                    <p>Learn CSS(6h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="80%"></div>
+                        <div class="progress-text">80%</div>
+                    </div>
+
+                    <p>Learn JavaScript(15h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.4%"></div>
+                        <div class="progress-text">0.4%</div>
+                    </div>
+
+                    <h3>Intermediate Courses:</h3>
+                    <p>Learn Intermediate CSS(10h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.1%"></div>
+                        <div class="progress-text">0.1%</div>
+                    </div>
+
+                    <p>Learn CSS: Flexbox and Grid(4h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.1%"></div>
+                        <div class="progress-text">0.1%</div>
+                    </div>
+
+                    <h3>Advanced Courses:</h3>
+                    <p>Learn React(13h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.1%"></div>
+                        <div class="progress-text">0.1%</div>
+                    </div>
+
+                    <p>Learn TypeScript(10h) - CodeAcademy</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="0.1%"></div>
+                        <div class="progress-text">0.1%</div>
+                    </div>
+
+                    <h3>University Admission Certification</h3>
+                    <p>Mandal Upper Secondary School / Sep 2021 - June 2022</p>
+
+                    <ul class="with-bullets">
+                        <li>Specialization in Norwegian, history, and social studies</li>
+                        <li>Developed critical thinking and analytical skills through interdisciplinary assignments</li>
+                        <li>Increased competence in independent learning and project work</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- Education -->
-            <section>
-                <h3>Education</h3>
-                <div class="education">
-                    <h4>Programming at Selvstudium, Spangereid</h4>
-                    <span>October 2024 – Present</span>
-                    <p>Friåret brukt på selvstudium i programmering. HTML, CSS, JavaScript, Python.</p>
+            <!-- Experience Section -->
+            <section id="Experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <h3>Process Technician</h3>
+                    <p>at Confidential Company / Now</p>
+                    <ul>
+                        <li>Monitored and optimized production processes to ensure efficiency and product quality</li>
+                        <li>Assisted in troubleshooting and resolving process-related issues to minimize downtime</li>
+                    </ul>
                 </div>
-                <div class="education">
-                    <h4>Kjemiprosess og Laboratoriefag at Mandal Vidergående Skole, Mandal</h4>
-                    <span>August 2023 – June 2024</span>
-                </div>
-                <div class="education">
-                    <h4>Påbygg til generell studiekompetanse at Mandal Vidergående Skole, Mandal</h4>
-                    <span>September 2021 – June 2023</span>
-                    <p>2-årig påbygg til generell studiekompetanse pga graviditet.</p>
+                <!-- Add all other experience sections from your old HTML here -->
+            </section>
+
+            <!-- Languages Section -->
+            <section id="Languages">
+                <h3>Languages</h3>
+                <div class="badge-container">
+                    <div class="badge" style="background-color: #ffffffd2;">
+                        <img src="https://vectorflags.s3.amazonaws.com/flags/us-square-01.png" alt="English Badge">
+                        <p>English</p>
+                        <p>Advanced</p>
+                    </div>
+                    <div class="badge" style="background-color: #ffffffd2;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1200px-Flag_of_Norway.svg.png" alt="Norwegian Badge">
+                        <p>Norwegian</p>
+                        <p>Native</p>
+                    </div>
                 </div>
             </section>
         </div>
 
-        <!-- Right section -->
+        <!-- Right Section -->
         <div class="right-section">
             <!-- Details -->
             <section>
@@ -66,41 +144,52 @@
                 <p>Spangereid, Norway<br>+47 92115999<br><a href="mailto:martine.stormen@gmail.com">martine.stormen@gmail.com</a></p>
             </section>
 
-            <!-- Links -->
-            <section>
-                <h3>Links</h3>
-                <p><a href="https://github.com/MartineStorm">Github</a></p>
-            </section>
-
             <!-- Skills -->
             <section>
                 <h3>Skills</h3>
                 <ul>
-                    <li>Adaptability <span>★★★★★</span></li>
-                    <li>Ability to Work in a Team <span>★★★★☆</span></li>
-                    <li>Computer Skills <span>★★★★☆</span></li>
-                    <li>Microsoft Office <span>★★★☆☆</span></li>
-                    <li>Fast Learner <span>★★★★☆</span></li>
-                    <li>Programmering <span>★★☆☆☆</span></li>
+                    <li>HTML <div class="progress"><div class="progress-bar" style="width: 100%;"></div></div></li>
+                    <li>CSS <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                    <li>JavaScript <div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+                    <li>TypeScript <div class="progress"><div class="progress-bar" style="width: 40%;"></div></div></li>
+                    <li>SQL <div class="progress"><div class="progress-bar" style="width: 20%;"></div></div></li>
+                    <li>Python <div class="progress"><div class="progress-bar" style="width: 10%;"></div></div></li>
                 </ul>
             </section>
 
-            <!-- Hobbies -->
+            <!-- Hobbies Section -->
             <section>
                 <h3>Hobbies</h3>
                 <p>Reise, datateknologi</p>
             </section>
 
-            <!-- Languages -->
-            <section>
-                <h3>Languages</h3>
+            <!-- License Section -->
+            <section id="license-section">
+                <h3>License</h3>
                 <ul>
-                    <li>Norsk <span>★★★★★</span></li>
-                    <li>Engelsk <span>★★★☆☆</span></li>
+                    <li>Driver's license for automatic transmission vehicles</li>
+                    <li>Forklift Operator License</li>
+                </ul>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses-section">
+                <h3>Courses</h3>
+                <ul>
+                    <li>FSE with First Aid 2019</li>
+                    <li>Red Cross Communication Course</li>
+                    <li>Forklift Operator Course with Certification</li>
                 </ul>
             </section>
         </div>
     </div>
+
+    <footer>
+        <h2>Contact</h2>
+        <p>Email: martine.stormen@gmail.com</p>
+        <p>Phone: 39399393</p>
+        <p>Address: bla bla 34, 4520 Lindesnes</p>
+    </footer>
 
     <script src="CVint.js"></script>
 </body>

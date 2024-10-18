@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -6,109 +5,35 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-}
-
-.button-container {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.download-btn {
-    background-color: #ddd;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.download-btn:hover {
-    background: #d6d6d6;
-    color: #ffffff;
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button#topBtn {
-    padding: 10px 50px;
-    color: rgb(0, 0, 0);
-    background: linear-gradient(45deg, #ffffff, #f8ebe3);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-button#topBtn:hover {
-    background: linear-gradient(45deg, #d3d3d3, #d3d3d3);
-    color: rgb(0, 0, 0);
-}
-
-
-button#PrintButton {
-    background-color: #ddd;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-button#PrintButton:hover {
-    background-color: #d6d6d6;
-    color: white;
-}
-
-button#GithubButton {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    background-color: #ddd;
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-button#GithubButton:hover {
-    background-color: #d6d6d6;
-    color: white;
-}
-
-button#PortfolioButton {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    background-color: #ddd;
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-button#PortfolioButton:hover {
-    background-color: #d6d6d6;
-    color: white;
-}
-
+/* Container */
 .container {
     display: flex;
     max-width: 1100px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
+.dark-mode .container {
+    background-color: #2c2c2c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Left and Right Sections */
 .left-section, .right-section {
-    padding: 20px;
+    padding: 30px;
 }
 
 .left-section {
@@ -117,25 +42,91 @@ button#PortfolioButton:hover {
 
 .right-section {
     width: 35%;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     padding: 30px 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Profile */
-.profile {
-    text-align: left;
+/* Email in Details Section */
+.right-section a {
+    color: inherit; /* Inherits the default text color */
+    text-decoration: none; /* Removes underline */
 }
 
-.profile h1 {
-    font-size: 36px;
-    color: #1f4e78;
+.right-section a:hover {
+    color: inherit; /* Keeps the same color on hover */
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+/* Skills */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Badge Section */
+.badge-container {
+    display: flex;
+    gap: 20px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffffd2;
+    padding: 10px;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-5px); /* Lifts the badge slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds more shadow on hover */
+}
+
+.badge img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
+.badge p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.dark-mode .badge {
+    background-color: #3a3a3a;
+    color: #f4f4f9;
+}
+
+.dark-mode .right-section {
+    background-color: #3a3a3a;
+}
+
+/* Profile */
+.profile h1 {
+    font-size: 38px;
+    color: #8d8d8d;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 .profile h2 {
-    font-size: 20px;
-    color: #1f4e78;
+    font-size: 24px;
+    color: #9c88ff;
     margin-bottom: 20px;
 }
 
@@ -144,58 +135,141 @@ button#PortfolioButton:hover {
     width: 150px;
     height: 150px;
     margin-top: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* Section Titles */
-h3 {
-    font-size: 20px;
-    color: #1f4e78;
-    margin-bottom: 15px;
+.profile-img:hover {
+    transform: scale(1.1);
 }
 
-/* Text Styling */
-h4 {
-    font-size: 16px;
-    color: #333;
+/* Buttons */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
 }
 
-span {
-    display: block;
-    font-size: 14px;
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #9c88ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #d3d3d3;
+    transform: translateY(-2px);
+}
+
+.dark-mode button {
+    background-color: #444;
+}
+
+.dark-mode button:hover {
+    background-color: #666;
+}
+
+/* Employment History and Education */
+section h3 {
+    font-size: 24px;
+    color: #7b61ff98;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #9c88ff;
+    padding-bottom: 5px;
+}
+
+.dark-mode h3 {
+    color: #8d8d8d;
+}
+
+section p, section span {
     color: #666;
 }
 
-/* Right Section Styling */
-.right-section h3 {
-    font-size: 18px;
-    color: #1f4e78;
+.dark-mode p, .dark-mode span {
+    color: #ccc;
 }
 
-.right-section p {
-    margin: 10px 0;
-}
-
-.right-section ul {
-    list-style: none;
+/* Skills */
+ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.right-section li {
+li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .progress {
+    background-color: #4d4d4d;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #9c88ff;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.dark-mode .progress-bar {
+    background-color: #9c88ff;
+}
+
+/* Hobbies and Languages */
+.right-section ul {
+    margin-top: 10px;
+}
+
+.right-section ul li {
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+    font-size: 16px;
 }
 
-.right-section li span {
-    color: #1f4e78;
+/* Dark Mode Button */
+.dark-mode-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #1f4e78;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Links */
-.right-section a {
-    color: #1f4e78;
-    text-decoration: none;
+.dark-mode-btn:hover {
+    background-color: #e84a5f;
 }
 
-.right-section a:hover {
-    text-decoration: underline;
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
